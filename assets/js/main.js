@@ -1,3 +1,4 @@
+import initUseToggle from "./helpers/UseToggle.js";
 import ImageInfo from "./sections/image-info.js";
 
 /**
@@ -5,4 +6,5 @@ import ImageInfo from "./sections/image-info.js";
  */
 window.addEventListener("load", () => {
   ImageInfo.init();
+  initUseToggle();
 });
