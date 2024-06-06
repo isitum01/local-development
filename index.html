@@ -11,35 +11,38 @@
 
 <body>
     <main>
-        <section class="image-info js-image-info">
-            <div class="c-container image-info__container">
-                <div class="image-info__container__image"
-                    style="background-image: url('./dist/images/image-girl.jpeg');">
-                </div>
-                <div class="image-info__container__info">
-                    <div class="image-info__container__info__wrapper">
-                        <h3 class="image-info__container__info__wrapper__title">Handcrafted and Responsibly Sourced</h3>
-                        <p class="image-info__container__info__wrapper__description">
-                            On the other hand, we denounce with righteous indignation and dislike men who are so
-                            beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire,
-                            that they cannot foresee the pain and trouble that are bound to ensue; and equal blame
-                            belongs to those who fail in their duty through weakness of will, which is the same as
-                            saying through shrinking from toil and pain.
-                        </p>
-                        <p class="image-info__container__info__wrapper__description js-additional-description hidden">
-                            On the other hand, we denounce with righteous indignation and dislike men who are so
-                            beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire,
-                            that they cannot foresee the pain and trouble that are bound to ensue; and equal blame
-                            belongs to those who fail in their duty through weakness of will, which is the same as
-                            saying through shrinking from toil and pain.
-                        </p>
-                        <div class="c-button js-learn-more-btn">
-                            <span class="c-button__text">Learn more</span>
+        <use-toggle>
+            <section class="image-info js-image-info">
+                <div class="c-container image-info__container">
+                    <div class="image-info__container__image"
+                        style="background-image: url('./dist/images/image-girl.jpeg');">
+                    </div>
+                    <div class="image-info__container__info">
+                        <div class="image-info__container__info__wrapper">
+                            <h3 class="image-info__container__info__wrapper__title">Handcrafted and Responsibly Sourced
+                            </h3>
+                            <p class="image-info__container__info__wrapper__description">
+                                On the other hand, we denounce with righteous indignation and dislike men who are so
+                                beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire,
+                                that they cannot foresee the pain and trouble that are bound to ensue; and equal blame
+                                belongs to those who fail in their duty through weakness of will, which is the same as
+                                saying through shrinking from toil and pain.
+                            </p>
+                            <p class="image-info__container__info__wrapper__description hidden" toggle-content>
+                                On the other hand, we denounce with righteous indignation and dislike men who are so
+                                beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire,
+                                that they cannot foresee the pain and trouble that are bound to ensue; and equal blame
+                                belongs to those who fail in their duty through weakness of will, which is the same as
+                                saying through shrinking from toil and pain.
+                            </p>
+                            <div class="c-button" toggle-control>
+                                <span class="c-button__text">Learn more</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </use-toggle>
     </main>
 </body>
 
