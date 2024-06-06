@@ -1,0 +1,19 @@
+//
+// File for definition of all core styles
+//
+
+html {
+  font-size: 10px;
+  font-family: "Fira Sans", sans-serif;
+  scroll-behavior: smooth;
+  background: $color-pink;
+  color: $color-black;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+}
