@@ -1,0 +1,75 @@
+//
+// File for definition of all typography styles
+//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+p,
+a,
+li,
+span {
+  font-size: 16px;
+}
+
+a,
+a:focus,
+a:hover,
+a:active {
+  color: $color-white;
+  text-decoration: none;
+}
+
+// Tablet styles
+@include respondBetween(0, $breakpoint-tablet) {
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 32px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+}
+
+// Mobile styles
+@include respondBetween(0, $breakpoint-mobile) {
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 28px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+}

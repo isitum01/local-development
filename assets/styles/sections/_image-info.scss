@@ -1,0 +1,121 @@
+.image-info {
+  background: $color-pink;
+  margin: 200vh auto;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+
+  &.reveal {
+    opacity: 1;
+
+    .image-info {
+      &__container {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    transition: all 0.6s ease-in-out;
+    transform: translateY(100px);
+
+    &__image {
+      flex: 1;
+      @include responsiveImageContainer(720, 576);
+      max-width: 50%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &__info {
+      flex: 1;
+      max-width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 119.5px;
+
+      &__wrapper {
+        max-width: 512px;
+        text-align: center;
+
+        &__title {
+          font-weight: 275;
+          line-height: 41.6px;
+        }
+
+        &__description {
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 23px;
+          margin: 16px auto 24px;
+          transition: all 1s ease-in-out;
+          overflow: hidden;
+
+          &.hidden {
+            max-height: 0;
+            margin: 0 auto 0;
+          }
+        }
+      }
+    }
+  }
+
+  @include respondBetween(0, $breakpoint-desktop) {
+    &__container {
+      padding: 0;
+
+      &__info {
+        padding: 119.5px 48px 48px;
+      }
+    }
+  }
+
+  @include respondBetween(0, $breakpoint-tablet) {
+    &__container {
+      flex-direction: column;
+      align-items: center;
+
+      &__image {
+        max-width: 100%;
+        max-height: 50vh;
+        background-position: top center;
+      }
+
+      &__info {
+        padding: 62px 16px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  @include respondBetween(0, $breakpoint-mobile) {
+    &__container {
+      &__image {
+        max-width: none;
+        min-height: 300px;
+      }
+
+      &__info {
+        padding: 62px 16px;
+        max-width: 100%;
+
+        &__wrapper {
+          max-width: 343px;
+
+          &__title {
+            line-height: 31.2px;
+          }
+
+          &__description {
+            font-size: 16px;
+            line-height: 20.8px;
+          }
+        }
+      }
+    }
+  }
+}

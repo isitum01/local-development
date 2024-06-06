@@ -1,0 +1,20 @@
+.c-button {
+  padding: 17px 49px;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+
+  &__text {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18.2px;
+  }
+
+  @include respondBetween(0, $breakpoint-mobile) {
+    padding: 16px 24px;
+
+    &__text {
+      font-size: 12px;
+    }
+  }
+}

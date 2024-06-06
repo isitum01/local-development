@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html {
+  font-size: 10px;
+  font-family: "Fira Sans", sans-serif;
+  scroll-behavior: smooth;
+  background: #e3cfcf;
+  color: #000000;
+}
+html * {
+  box-sizing: border-box;
+}
+html body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+h1 {
+  font-size: 54px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+p,
+a,
+li,
+span {
+  font-size: 16px;
+}
+
+a,
+a:focus,
+a:hover,
+a:active {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 32px;
+  }
+  h3 {
+    font-size: 28px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 36px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+  h3 {
+    font-size: 24px;
+  }
+}
+.c-button {
+  padding: 17px 49px;
+  border: 1px solid black;
+  display: inline-block;
+  cursor: pointer;
+}
+.c-button__text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18.2px;
+}
+@media only screen and (max-width: 600px) {
+  .c-button {
+    padding: 16px 24px;
+  }
+  .c-button__text {
+    font-size: 12px;
+  }
+}
+
+.c-container {
+  margin: 0 auto;
+  padding: 0 64px;
+  max-width: 1568px;
+}
+@media only screen and (max-width: 1024px) {
+  .c-container {
+    padding: 0 44px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .c-container {
+    padding: 0 24px;
+  }
+}
+
+.image-info {
+  background: #e3cfcf;
+  margin: 200vh auto;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+.image-info.reveal {
+  opacity: 1;
+}
+.image-info.reveal .image-info__container {
+  transform: translateY(0);
+}
+.image-info__container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  transition: all 0.6s ease-in-out;
+  transform: translateY(100px);
+}
+.image-info__container__image {
+  flex: 1;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  max-width: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image-info__container__image:before {
+  display: block;
+  content: "";
+  padding-top: 80%;
+  clear: both;
+}
+.image-info__container__image:after {
+  display: block;
+  clear: both;
+  content: "";
+}
+.image-info__container__info {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 119.5px;
+}
+.image-info__container__info__wrapper {
+  max-width: 512px;
+  text-align: center;
+}
+.image-info__container__info__wrapper__title {
+  font-weight: 275;
+  line-height: 41.6px;
+}
+.image-info__container__info__wrapper__description {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 23px;
+  margin: 16px auto 24px;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+.image-info__container__info__wrapper__description.hidden {
+  max-height: 0;
+  margin: 0 auto 0;
+}
+@media only screen and (max-width: 1440px) {
+  .image-info__container {
+    padding: 0;
+  }
+  .image-info__container__info {
+    padding: 119.5px 48px 48px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .image-info__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .image-info__container__image {
+    max-width: 100%;
+    max-height: 50vh;
+    background-position: top center;
+  }
+  .image-info__container__info {
+    padding: 62px 16px;
+    max-width: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .image-info__container__image {
+    max-width: none;
+    min-height: 300px;
+  }
+  .image-info__container__info {
+    padding: 62px 16px;
+    max-width: 100%;
+  }
+  .image-info__container__info__wrapper {
+    max-width: 343px;
+  }
+  .image-info__container__info__wrapper__title {
+    line-height: 31.2px;
+  }
+  .image-info__container__info__wrapper__description {
+    font-size: 16px;
+    line-height: 20.8px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

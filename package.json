@@ -1,0 +1,13 @@
+{
+  "name": "local-development",
+  "version": "1.0.0",
+  "repository": "https://github.com/isitum01/local-development.git",
+  "author": "Ivan Šitum <isitum01@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "sass": "sass --watch assets/styles:dist/css"
+  },
+  "dependencies": {
+    "sass": "^1.77.4"
+  }
+}

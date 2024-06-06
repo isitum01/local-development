@@ -1,0 +1,13 @@
+.c-container {
+  margin: 0 auto;
+  padding: 0 $padding-page-container;
+  max-width: $max-width-page-container;
+
+  @include respondBetween(0, $breakpoint-tablet) {
+    padding: 0 $padding-page-container-tablet;
+  }
+
+  @include respondBetween(0, $breakpoint-mobile) {
+    padding: 0 $padding-page-container-mobile;
+  }
+}
