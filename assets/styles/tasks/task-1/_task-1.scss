@@ -64,6 +64,7 @@
     }
   }
 
+  // Desktop styles
   @include respondBetween(0, $breakpoint-desktop) {
     &__container {
       padding: 0;
@@ -74,6 +75,7 @@
     }
   }
 
+  // Tablet styles
   @include respondBetween(0, $breakpoint-tablet) {
     &__container {
       flex-direction: column;
@@ -92,6 +94,7 @@
     }
   }
 
+  // Mobile styles
   @include respondBetween(0, $breakpoint-mobile) {
     &__container {
       &__image {
