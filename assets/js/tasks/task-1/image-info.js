@@ -1,4 +1,4 @@
-import ObserverHelper from "../helpers/ObserverHelper.js";
+import ObserverHelper from "../../helpers/ObserverHelper.js";
 
 /**
  * Function that handles functionalities of image-info section
