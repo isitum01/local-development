@@ -1,0 +1,51 @@
+.c-link {
+  position: relative;
+  font-family: "Barlow Condensed";
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid $color-black;
+  transition: all 0.24s ease-in-out;
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10px;
+    transform: translate(-50%, -50%) scaleX(0);
+    width: 14px;
+    height: 1px;
+    background: $color-black;
+    transform-origin: right;
+    transition: transform 0.24s ease-in-out;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: auto;
+    right: -10px;
+    transform: translate(50%, -50%) scaleX(0);
+    transform-origin: left;
+  }
+
+  &:hover {
+    border-color: transparent;
+
+    &::before {
+      transform: translate(-50%, -50%) scaleX(1);
+    }
+    &::after {
+      transform: translate(50%, -50%) scaleX(1);
+    }
+  }
+
+  // Tablet styles
+  @include respondBetween(0, $breakpoint-tablet) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

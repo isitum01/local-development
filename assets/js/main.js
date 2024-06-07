@@ -1,5 +1,5 @@
 import initUseToggle from "./helpers/UseToggle.js";
-import ImageInfo from "./sections/image-info.js";
+import ImageInfo from "./tasks/task-1/image-info.js";
 
 /**
  * Init sections scripts
