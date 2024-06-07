@@ -4,6 +4,9 @@
   left: 50%;
   transform: translateX(-50%);
   padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 
   &__item {
     font-size: 16px;
