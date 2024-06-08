@@ -1,0 +1,66 @@
+{% schema %}
+{
+  "name": "Image Info Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image",
+      "default": "shopify/assets/image-girl.jpeg"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Handcrafted and Responsibly Sourced"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain."
+    },
+    {
+      "type": "textarea",
+      "id": "hidden_description",
+      "label": "Hidden Description",
+      "default": "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Learn more"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Default",
+      "category": "Custom sections"
+    }
+  ]
+}
+{% endschema %}
+
+// Usage (corresponding html)
+<section class="image-info js-image-info">
+  <div class="c-container image-info__container">
+    <div class="image-info__container__image"
+         style="background-image: url({{ settings.background_image }});">
+    </div>
+    <div class="image-info__container__info">
+      <div class="image-info__container__info__wrapper">
+        <h3 class="image-info__container__info__wrapper__title">{{ settings.title }}</h3>
+        <p class="image-info__container__info__wrapper__description">
+          {{ settings.description }}
+        </p>
+        <p class="image-info__container__info__wrapper__description hidden" toggle-content>
+          {{ settings.hidden_description }}
+        </p>
+        <div class="c-button" toggle-control>
+          <span class="c-button__text">{{ settings.button_text }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
