@@ -507,6 +507,14 @@ a:active {
   }
 }
 
+.scroll-indicator {
+  position: absolute;
+  left: 50%;
+  top: 50vh;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
 .task-2 {
   background: white;
 }
