@@ -1,0 +1,15 @@
+.task-4 {
+  padding: 100px 0;
+
+  &__container {    
+    &__schema {
+      font-size: 12px;
+    }
+
+    &__usage {
+      &__title {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
