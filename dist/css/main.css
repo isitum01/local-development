@@ -589,6 +589,16 @@ a:active {
   }
 }
 
+.task-4 {
+  padding: 100px 0;
+}
+.task-4__container__schema {
+  font-size: 12px;
+}
+.task-4__container__usage__title {
+  margin-bottom: 24px;
+}
+
 .task-5 {
   padding: 100px 0;
 }

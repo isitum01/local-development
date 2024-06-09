@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" class="task-3">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./dist/css/main.css">
+    <script src="./assets/js/main.js" type="module"></script>
+    <title>Local Development</title>
+</head>
+
+<body>
+    <nav class="c-navigation c-container">
+        <a href="/index.html" class="c-navigation__item c-link">TASK 1</a>
+        <a href="/task-2.html" class="c-navigation__item c-link">TASK 2</a>
+        <a href="/task-3.html" class="c-navigation__item c-link">TASK 3</a>
+        <a href="/task-4.html" class="c-navigation__item c-link">TASK 4</a>
+        <a href="/task-5.html" class="c-navigation__item c-link">TASK 5</a>
+    </nav>
+    <main>
+        <section class="task-4">
+            <div class="c-container task-4__container">
+                <h4 class="c-container task-4__container__title">SCHEMA</h4>
+                <pre>
+                    <code class="task-4__container__schema">
+                        {% schema %}
+                        {
+                            "name": "Image Info Section",
+                                "settings": [
+                                    {
+                                        "type": "image_picker",
+                                        "id": "background_image",
+                                        "label": "Background Image",
+                                        "default": "shopify/assets/image-girl.jpeg"
+                                    },
+                                    {
+                                        "type": "text",
+                                        "id": "title",
+                                        "label": "Title",
+                                        "default": "Handcrafted and Responsibly Sourced"
+                                    },
+                                    {
+                                        "type": "textarea",
+                                        "id": "description",
+                                        "label": "Description",
+                                        "default": "On the other hand, we denounce with righteous indignation and dislike men who are so
+                                                    beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire,
+                                                    that they cannot foresee the pain and trouble that are bound to ensue; and equal blame
+                                                    belongs to those who fail in their duty through weakness of will, which is the same as
+                                                    saying through shrinking from toil and pain."
+                                    },
+                                    {
+                                        "type": "textarea",
+                                        "id": "hidden_description",
+                                        "label": "Hidden Description",
+                                        "default": "On the other hand, we denounce with righteous indignation and dislike men who are so
+                                                    beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire,
+                                                    that they cannot foresee the pain and trouble that are bound to ensue; and equal blame
+                                                    belongs to those who fail in their duty through weakness of will, which is the same as
+                                                    saying through shrinking from toil and pain."
+                                    },
+                                    {
+                                        "type": "text",
+                                        "id": "button_text",
+                                        "label": "Button Text",
+                                        "default": "Learn more"
+                                    }
+                                ],
+                                "presets": [
+                                    {
+                                        "name": "Default",
+                                        "category": "Custom sections"
+                                    }
+                                ]
+                        }
+                        {% endschema %}
+                    </code>
+                </pre>
+
+                <section class="task-4__container__usage">
+                    <h4 class="task-4__container__usage__title">Usage (corresponding html)</h4>
+                    <p class="c-container task-4__container__usage__description">
+                        &lt;section><br />
+                        &emsp; &emsp; &lt;div style="background-image: url({{ settings.background_image }});"><br />
+                        &emsp; &emsp; &lt;/div><br />
+                        &emsp; &emsp; &lt;h3>{{ settings.title }}&lt;/h3><br />
+                        &emsp; &emsp; &lt;p><br />
+                        &emsp; &emsp; &emsp; {{ settings.description }}<br />
+                        &emsp; &emsp; &lt;/p><br />
+                        &emsp; &emsp; &lt;p toggle-content><br />
+                        &emsp; &emsp; &emsp; {{ settings.hidden_description }}<br />
+                        &emsp; &emsp; &lt;/p><br />
+                        &emsp; &emsp; &lt;div toggle-control><br />
+                        &emsp; &emsp; &emsp; &lt;span>{{ settings.button_text }}&lt;/span><br />
+                        &emsp; &emsp; &lt;/div><br />
+                        &lt;/section>
+                    </p>
+
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
